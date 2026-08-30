@@ -54,28 +54,6 @@ body {
     font-weight: 400;
 }
 
-/* MOBILE HERO */
-@media (max-width: 480px) {
-    .hero {
-        height: 170px;
-        border-radius: 10px;
-    }
-
-    .hero-title {
-        font-size: 26px;
-        bottom: 55px;
-    }
-
-    .hero-subtitle {
-        font-size: 15px;
-        bottom: 25px;
-    }
-}
-
-/* ========================= */
-/*        NAV BAR BOTTONI    */
-/* ========================= */
-
 .main-nav {
     display: flex;
     justify-content: center;
@@ -105,10 +83,6 @@ body {
     background: #335dcc;
 }
 
-/* ========================= */
-/*        CALENDAR HEADER    */
-/* ========================= */
-
 .header {
     display: flex;
     justify-content: center;
@@ -136,10 +110,6 @@ body {
 .header button:hover {
     background: #f0f0f0;
 }
-
-/* ========================= */
-/*        CALENDAR GRID      */
-/* ========================= */
 
 .calendar {
     width: min(100%, 900px);
@@ -193,13 +163,11 @@ body {
     line-height: 1.2;
 }
 
-/* GIORNO CORRENTE */
 .day.today {
     background: #e8f0ff;
     border: 2px solid #4a7dff;
 }
 
-/* BADGE RIFIUTO */
 .badge {
     margin-top: 6px;
     padding: 4px 6px;
@@ -219,17 +187,12 @@ body {
     box-sizing: border-box;
 }
 
-/* COLORI */
 .organico { background: #8B5A2B; }
 .secco { background: #6E6E6E; }
 .plastica { background: #FFD700; color: black; }
 .carta { background: #1E90FF; }
 .vetro { background: #228B22; }
 .nessuno { background: #999; }
-
-/* ========================= */
-/*        PAGINA CATEGORIE   */
-/* ========================= */
 
 .categories {
     max-width: 700px;
@@ -257,7 +220,6 @@ body {
     line-height: 1.5;
 }
 
-/* COLORI COERENTI */
 .regole-bg { border-color: #18502f; }
 .organico-bg { border-color: #8B5A2B; }
 .secco-bg { border-color: #6E6E6E; }
@@ -376,5 +338,20 @@ body {
         margin-top: 4px;
         line-height: 1.2;
         border-radius: 4px;
+    }
+
+    .hero {
+        height: 170px;
+        border-radius: 10px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        bottom: 55px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        bottom: 25px;
     }
 }

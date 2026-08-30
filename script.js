@@ -1,7 +1,6 @@
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 
-/* CONVERSIONE: JS usa Domenica=0, noi vogliamo Lunedì=0 */
 function convertDay(jsDay) {
     return (jsDay + 6) % 7;
 }
@@ -22,7 +21,6 @@ function renderCalendar(calendar, fridayRules) {
 
     const date = new Date(currentYear, currentMonth, 1);
 
-    // PRIMO GIORNO DEL MESE CONVERTITO
     const firstDay = convertDay(date.getDay());
 
     const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -40,19 +38,16 @@ function renderCalendar(calendar, fridayRules) {
 
             const dayNumber = dayCount;
 
-            // GIORNO DELLA SETTIMANA CONVERTITO
             const jsDay = new Date(currentYear, currentMonth, dayNumber).getDay();
             const dayOfWeek = convertDay(jsDay);
 
             let waste = calendar[dayOfWeek];
 
-            // VENERDÌ = 4 (perché Lunedì=0)
             if (dayOfWeek === 4) {
                 const fridayNumber = Math.ceil(dayNumber / 7);
                 waste = fridayRules[fridayNumber - 1];
             }
 
-            // COLORI
             let cssClass = "";
             if (waste.includes("Organico")) cssClass = "organico";
             else if (waste.includes("Secco")) cssClass = "secco";
@@ -61,7 +56,6 @@ function renderCalendar(calendar, fridayRules) {
             else if (waste.includes("Vetro")) cssClass = "vetro";
             else cssClass = "nessuno";
 
-            // HTML DEL GIORNO
             cell.innerHTML = `
                 <div class="day-number">${dayNumber}</div>
                 <a href="categorie.html#${cssClass}" 
@@ -70,7 +64,7 @@ function renderCalendar(calendar, fridayRules) {
                     ${waste}
                 </a>
             `;
-
+            
             dayCount++;
         }
 
