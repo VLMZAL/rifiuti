@@ -1,0 +1,341 @@
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-image: url('images/castle.jpg'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.small-hero {
+    height: 180px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.hero-eco {
+    color: #ffffff;
+}
+.hero-calendar {
+    color: #1acc50;
+}
+.hero-subtitle {
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    color: #eaeaea;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* MOBILE HERO */
+@media (max-width: 480px) {
+    .hero {
+        height: 170px;
+        border-radius: 10px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        bottom: 55px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        bottom: 25px;
+    }
+}
+
+/* ========================= */
+/*        NAV BAR BOTTONI    */
+/* ========================= */
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.nav-btn {
+    background: #4a7dff;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background: #3a6ae0;
+}
+
+.nav-btn:active {
+    background: #335dcc;
+}
+
+/* MOBILE NAV */
+@media (max-width: 480px) {
+    .nav-btn {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+}
+
+/* ========================= */
+/*        CALENDAR HEADER    */
+/* ========================= */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.header button:hover {
+    background: #f0f0f0;
+}
+
+/* ========================= */
+/*        CALENDAR GRID      */
+/* ========================= */
+
+.calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #eee;
+    font-size: 12px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    min-height: 80px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 6px;
+    position: relative;
+    transition: 0.2s;
+    font-size: 13px;
+}
+
+.day:hover {
+    background: #f4f7ff;
+}
+
+.day-number {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* GIORNO CORRENTE */
+.day.today {
+    background: #e8f0ff;
+    border: 2px solid #4a7dff;
+}
+
+/* BADGE RIFIUTO */
+.badge {
+    margin-top: 6px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* COLORI */
+.organico { background: #8B5A2B; }
+.secco { background: #6E6E6E; }
+.plastica { background: #FFD700; color: black; }
+.carta { background: #1E90FF; }
+.vetro { background: #228B22; }
+.nessuno { background: #999; }
+
+/* ========================= */
+/*        PAGINA CATEGORIE   */
+/* ========================= */
+
+.categories {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cat-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    border-left: 10px solid transparent;
+}
+
+.cat-box h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cat-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* COLORI COERENTI */
+.regole-bg { border-color: #18502f; }
+.organico-bg { border-color: #8B5A2B; }
+.secco-bg { border-color: #6E6E6E; }
+.plastica-bg { border-color: #FFD700; }
+.carta-bg { border-color: #1E90FF; }
+.vetro-bg { border-color: #228B22; }
+
+.servizi-divider {
+    margin: 50px 0 30px 0;
+    padding: 20px 0;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    text-align: center;
+}
+
+.servizi-divider h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #2C3E50;
+}
+
+
+.pericolosi-bg {border-color: #C0392B;}
+.ingombranti-bg {border-color: #8E44AD;}
+.centri-bg {border-color: #2C3E50;}
+.compostaggio-bg {border-color: #523112;}
+
+
+.cat-box h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* MOBILE CATEGORIE */
+@media (max-width: 480px) {
+
+    /* Riduce padding generale */
+    body {
+        padding: 6px;
+    }
+
+    /* Calendario più compatto */
+    .calendar {
+        padding: 6px;
+        border-radius: 10px;
+    }
+
+    /* Header mese */
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .header button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    /* Giorni settimana */
+    .weekdays div {
+        font-size: 10px;
+        padding: 4px 0;
+    }
+
+    /* Celle del calendario */
+    .day {
+        min-height: 60px;        /* più basso */
+        padding: 3px;            /* meno padding */
+        font-size: 11px;         /* testo più piccolo */
+    }
+
+    .day-number {
+        font-size: 12px;
+    }
+
+    /* Badge rifiuto */
+    .badge {
+        font-size: 10px;         /* più piccolo */
+        padding: 2px 4px;        /* più compatto */
+        margin-top: 4px;
+        display: block;          /* va a capo */
+        text-align: center;
+        white-space: normal;     /* evita overflow */
+    }
+
+    /* Fix overflow griglia */
+    .days {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Raccolta Rifiuti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <h1 class="hero-title">
+            <span class="hero-eco">ECO</span>
+            <span class="hero-calendar">CALENDARIO</span>
+        </h1>
+        <p class="hero-subtitle">Pescolanciano • Raccolta Porta a Porta</p>
+    </div>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-btn">Calendario</a>
+        <a href="categorie.html" class="nav-btn">Categorie</a>
+    </nav>
+
+    <div class="header">
+        <button id="prev">◀</button>
+        <h1 id="month-year"></h1>
+        <button id="next">▶</button>
+    </div>
+
+    <div class="calendar">
+        <div class="weekdays">
+            <div>L</div>
+            <div>M</div>
+            <div>M</div>
+            <div>G</div>
+            <div>V</div>
+            <div>S</div>
+            <div>D</div>
+        </div>
+        <div id="days" class="days"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

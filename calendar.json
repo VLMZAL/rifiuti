@@ -1,0 +1,17 @@
+{
+    "calendar": [
+        "Organico",
+        "Secco residuo",
+        "Plastica e Metalli",
+        "Organico",
+        "speciale",
+        "Nessuna raccolta",
+        "Nessuna raccolta"
+    ],
+    "fridayRules": [
+        "Vetro",
+        "Carta e Cartone",
+        "Vetro",
+        "Carta e Cartone"
+    ]
+}
