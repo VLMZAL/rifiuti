@@ -241,12 +241,10 @@ body {
     color: #2C3E50;
 }
 
-
 .pericolosi-bg {border-color: #C0392B;}
 .ingombranti-bg {border-color: #8E44AD;}
 .centri-bg {border-color: #2C3E50;}
 .compostaggio-bg {border-color: #523112;}
-
 
 .cat-box h4 {
     font-size: 16px;
@@ -254,6 +252,15 @@ body {
     margin-bottom: 4px;
     font-weight: 600;
     color: #555;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 600;
 }
 
 @media (max-width: 700px) {
